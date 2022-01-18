@@ -1,0 +1,29 @@
+<div class="head d-flex justify-content-center">
+    <div class="card text-center " style="width: 18rem;" >
+      <div class="card-body">
+        <h5 class="card-title">Login</h5>
+        
+        
+
+
+        <form [formGroup] = "loginForm">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">User ID</label>
+                <input class="form-control"  formControlName='userid' placeholder="" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName='password' required>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary" (click)="submit()" [disabled]="!loginForm.valid">Login</button>
+            </div>
+            
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
